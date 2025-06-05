@@ -1,0 +1,21 @@
+{
+  "name": "full-stack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build-css": "tailwindcss -i ./ui/src/main.css -o ./ui/static/css/main.css",
+    "build-css-watch": "tailwindcss -i ./ui/src/main.css -o ./ui/static/css/main.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "author": "Tom Harris <me@tharris.uk>",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "alpinejs": "^3.14.0",
+    "htmx.org": "^1.9.12",
+    "husky": "^9.1.7",
+    "tailwindcss": "^3.4.4"
+  }
+}

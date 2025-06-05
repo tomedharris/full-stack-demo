@@ -1,0 +1,22 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "${BOUND_APPLICATION_PORT}:80"
+    volumes:
+      - .:/usr/src/app
+
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    entrypoint: go
+    command: test .
+    profiles:
+      - tools
+    environment:
+      PGSQL_DSN: ${PGSQL_DSN}
+    volumes:
+      - .:/usr/src/app
